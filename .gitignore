@@ -28,8 +28,6 @@ coverage.xml
 *.cover
 
 # Project data and generated cache
-src/
-tests/
 .terminal-browser-cache/
 *.cache
 *.log
