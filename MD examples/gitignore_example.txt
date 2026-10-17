@@ -1,0 +1,95 @@
+# gitignore_example
+#
+# Template .gitignore for from-scratch Python portfolio projects
+# (compression-codec, secure-secrets-vault, autograd-engine, markov-chatbot-cli, etc).
+#
+# This is a TEMPLATE, not meant to be committed as-is. When starting a new project,
+# copy this file to the project root as `.gitignore`, delete sections that don't apply
+# to that project's stack (e.g. drop "Node" if it's a pure-Python project, drop
+# "Rust" unless there's a cargo crate involved), and add project-specific entries
+# at the bottom under "# Project-specific" (e.g. benchmark corpus caches, generated
+# vault files, model checkpoints).
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Testing & coverage ----
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+
+# ---- Packaging / build tooling ----
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ---- Environment / secrets ----
+.env
+.env.*
+*.local
+secrets.json
+*.pem
+*.key
+
+# ---- Editors / IDEs ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS cruft ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs & temp files ----
+*.log
+*.tmp
+tmp/
+temp/
+
+# ---- Jupyter (if any exploratory notebooks are used) ----
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---- Node (delete this whole block if the project has no JS/TS tooling) ----
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ---- Rust (delete this whole block if the project has no cargo crate) ----
+target/
+Cargo.lock
+
+# ---- Project-specific (fill in per project before committing) ----
+# Examples seen across this portfolio — keep only what applies, delete the rest:
+#   /corpus/generated/          # benchmark corpus artifacts regenerated at test time
+#   *.vault                     # secure-secrets-vault encrypted vault files
+#   *.rev                       # secure-secrets-vault rollback sidecar files
+#   checkpoints/                # model checkpoints (gd-rl-agent, ZURO_AI, etc.)
+#   *.gguf                      # local LLM model weights (KronosAI, llama.cpp tooling)
+#   benchmark_results/          # generated benchmark output, keep only if not meant to be tracked
