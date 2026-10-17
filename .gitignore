@@ -40,6 +40,9 @@ coverage.xml
 *.pem
 *.key
 secrets.json
+# `certs/` is excluded by ~/.gitignore_global line 229, which also hides
+# tests/certs/ — a test fixture directory, not a credential store.
+!tests/certs/
 
 # Editors and IDEs
 .vscode/
